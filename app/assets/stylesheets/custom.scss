@@ -16,6 +16,10 @@ header p {
 }
 
 .below-header {
-    // Header height is 85px; 85 + 15 = 100
-    margin-top: 100px;
+    // Header height when viewed on mobile is ~177.5px
+    margin-top: 190px;
+}
+
+.collection-popout {
+    background-color: whitesmoke;
 }
