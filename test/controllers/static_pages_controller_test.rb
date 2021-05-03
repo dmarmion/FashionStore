@@ -6,4 +6,8 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get support" do
+    get static_pages_support_url
+    assert_response :success
+  end
 end
