@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/support', to: 'static_pages#support'
   
   root 'static_pages#home'
+  
+  resources :items
 end
