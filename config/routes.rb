@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'collections/show'
+
   get 'static_pages/home'
   get 'static_pages/support'
   
