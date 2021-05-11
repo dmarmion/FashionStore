@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   # Nicer paths
   get '/support', to: 'static_pages#support'
   
-  root 'static_pages#home'
+  get '/collections/:id', to: 'collections#show'
   
-  resources :items
+  get '/items', to: 'items#index'
+  get '/items/:id', to: 'items#show'
+  
+  root 'static_pages#home'
 end
