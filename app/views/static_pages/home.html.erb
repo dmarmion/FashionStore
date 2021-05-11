@@ -34,7 +34,7 @@
 <% Collection.all.each do |collection| %>
   <div class="row">
     <div class="col-xs-12 collection-popout">
-      <h4><%= collection.name %></h4>
+      <h4><%= link_to collection.name, controller: 'collections', action: 'show', id: collection.id %></h4>
     <p><i>n</i> items</p>
   </div>
   </div>
