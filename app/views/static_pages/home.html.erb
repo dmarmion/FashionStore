@@ -1,9 +1,11 @@
 <% provide(:title, "Home") %>
 
-<div class="center jumbotron">
-  <h1>Welcome to Noir.</h1>
-  <p>Shop 'til you <b>drop</b>.</p>
-  <p><span class="label label-warning">TODO</span></p>
+<div class="row" style="background-color: grey; color: white">
+  <div class="col-xs-12">
+    <h1>Welcome to Noir.</h1>
+    <p>A featured product will go here... when I get around to it...</p>
+    <p><span class="label label-warning">TODO</span></p>
+  </div>
 </div>
 
 <!-- Popular section -->
@@ -25,31 +27,18 @@
 <div class="row">
   <hr>
   <div class="col-xs-12">
-    <h2>Collections</h2><span class="label label-warning">TODO</span>
+    <h2>Collections</h2>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-6 collection-popout">
-    <h4>Women</h4>
+<% Collection.all.each do |collection| %>
+  <div class="row">
+    <div class="col-xs-12 collection-popout">
+      <h4><%= collection.name %></h4>
     <p><i>n</i> items</p>
   </div>
-  <div class="col-xs-6 collection-popout">
-    <h4>Men</h4>
-    <p><i>n</i> items</p>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 collection-popout">
-    <h4>Kids</h4>
-    <p><i>n</i> items</p>
-  </div>
-  <div class="col-xs-6 collection-popout">
-    <h4>New-ins</h4>
-    <p><i>n</i> items</p>
-  </div>
-</div>
+<% end %>
 
 <!-- Newsletter section -->
 <div class="row">
