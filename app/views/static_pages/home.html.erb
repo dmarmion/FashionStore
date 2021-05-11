@@ -35,7 +35,7 @@
   <div class="row">
     <div class="col-xs-12 collection-popout">
       <h4><%= link_to collection.name, controller: 'collections', action: 'show', id: collection.id %></h4>
-    <p><i>n</i> items</p>
+    <p><%= collection.items.count %> items</p>
   </div>
   </div>
 <% end %>

@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210511100758) do
+ActiveRecord::Schema.define(version: 20210511110414) do
 
   create_table "collections", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "collections_items", id: false, force: :cascade do |t|
+    t.integer "collection_id", null: false
+    t.integer "item_id",       null: false
+    t.index ["collection_id", "item_id"], name: "index_collections_items_on_collection_id_and_item_id", unique: true
   end
 
   create_table "items", force: :cascade do |t|
