@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   get '/items', to: 'items#index'
   get '/items/:id', to: 'items#show'
   
+  post '/', to: 'newsletter_recipients#new'
+  
   root 'static_pages#home'
 end

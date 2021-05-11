@@ -42,9 +42,12 @@
 
 <!-- Newsletter section -->
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-md-6">
     <h2>Newsletter</h2>
     <p>Sign up to our newsletter</p>
-    <span class="label label-warning">TODO</span>
+    <%= form_tag action: 'new', controller: 'newsletter_recipients' do %>
+      <%= text_field_tag 'email_address', @email, placeholder: 'Enter your email address here', class: 'form-control', style: 'margin-bottom: 15px' %>
+      <%= submit_tag 'Sign up', class: 'btn btn-primary', style: 'margin-bottom: 15px' %>
+    <% end %>
   </div>
 </div>
