@@ -1,0 +1,2 @@
+class NewsletterRecipient < ApplicationRecord
+end
