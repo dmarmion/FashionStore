@@ -6,7 +6,7 @@
 <% @collection.items.each do |item| %>
   <div class="row">
     <div class="col-xs-12 black-links">
-      <p>Picture?</p>
+      <%= image_tag item.photos.first.address, height: 200 %>
       <h4><%= link_to item.name, controller: 'items', action: 'show', id: item.id %></h4>
       <p>$<%= item.price %></p>
     </div>
