@@ -20,115 +20,141 @@ Item.create(name: "Urban Explorer Sweatshirt",
            price: 49.99,
            popularity: 70,
            startsellingdate: 3.weeks.ago)
-           # https://unsplash.com/photos/gCeCpP15V1o
-           # https://unsplash.com/photos/rtR9um-W24E
-           # https://unsplash.com/photos/FeUC_FpHLJA
-Item.find_by(name: "Urban Explorer Sweatshirt").collections << Collection.find_by(name: "Men")
+
+latest_item = Item.find_by(name: "Urban Explorer Sweatshirt")
+latest_item.collections << Collection.find_by(name: "Men")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1499971856191-1a420a42b498?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=629&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1499971132045-e9488b59b388?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1499970745367-901f51250ec9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80")
 
 Item.create(name: "Black Tube Dress",
            description: "A sleek black dress",
            price: 69.99,
            popularity: 50,
            startsellingdate: 1.year.ago)
-           # https://unsplash.com/photos/kOnPBfdMbII
-Item.find_by(name: "Black Tube Dress").collections << Collection.find_by(name: "Women")
+           
+latest_item = Item.find_by(name: "Black Tube Dress")
+latest_item.collections << Collection.find_by(name: "Women")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1606844079914-fb99f7c8e0ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
            
 Item.create(name: "Long Sleeve Shirt",
            description: "A comfortable long sleeve shirt",
            price: 29.99,
            popularity: 80,
            startsellingdate: 4.months.ago)
-           # https://unsplash.com/photos/RUWzWthQ-SA
-Item.find_by(name: "Long Sleeve Shirt").collections << Collection.find_by(name: "Women")
+           
+latest_item = Item.find_by(name: "Long Sleeve Shirt")
+latest_item.collections << Collection.find_by(name: "Women")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1606330574738-53fbe36a9bb3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=672&q=80")
 
 Item.create(name: "Short Sleeve T-Shirt",
            description: "A comfortable t-shirt featuring a hand skeleton print",
            price: 29.99,
            popularity: 90,
            startsellingdate: 2.weeks.ago)
-           # https://unsplash.com/photos/1yl3jzKoKXg
-           # https://unsplash.com/photos/TT-ROxWj9nA
-           # https://unsplash.com/photos/WQR_1ORmg2I
-           # https://unsplash.com/photos/wzRKn-AjKf4 (Male)
-Item.find_by(name: "Short Sleeve T-Shirt").collections << Collection.find_by(name: "Men")
-Item.find_by(name: "Short Sleeve T-Shirt").collections << Collection.find_by(name: "Women")
+           
+latest_item = Item.find_by(name: "Short Sleeve T-Shirt")
+latest_item.collections << Collection.find_by(name: "Men")
+latest_item.collections << Collection.find_by(name: "Women")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1503342484812-ee33283508a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1503342331296-c8ca3b8dd0a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
 
 Item.create(name: "Made Wild T-Shirt",
            description: "A t-shirt for those who are truly made wild",
            price: 29.99,
            popularity: 40,
            startsellingdate: 5.months.ago)
-           # https://unsplash.com/photos/HBGUsKKTxdU
-           # https://unsplash.com/photos/DvIJ7h5p_J8
-Item.find_by(name: "Made Wild T-Shirt").collections << Collection.find_by(name: "Men")
+
+latest_item = Item.find_by(name: "Made Wild T-Shirt")
+latest_item.collections << Collection.find_by(name: "Men")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1503341960582-b45751874cf0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1503341873906-91d1932a9758?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80")
 
 Item.create(name: "Silhouette Hoodie",
            description: "A comfortable and warm hoodie that turns you into a silhouette. Seriously.",
            price: 99.99,
            popularity: 69,
            startsellingdate: 1.week.ago)
-           # https://unsplash.com/photos/t3EsOtf0QVc
-Item.find_by(name: "Silhouette Hoodie").collections << Collection.find_by(name: "Men")
-Item.find_by(name: "Silhouette Hoodie").collections << Collection.find_by(name: "Women")
+
+latest_item = Item.find_by(name: "Silhouette Hoodie")
+latest_item.collections << Collection.find_by(name: "Men")
+latest_item.collections << Collection.find_by(name: "Women")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1503341654871-ed7935f6e05e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
 
 Item.create(name: "Spartan T-Shirt",
            description: "An encouraging t-shirt, in dark grey",
            price: 29.99,
            popularity: 41,
            startsellingdate: 7.weeks.ago)
-           # https://unsplash.com/photos/KrHNHoRLwmw
-           # https://unsplash.com/photos/cUycI0WY3dI (navy
-Item.find_by(name: "Spartan T-Shirt").collections << Collection.find_by(name: "Men")
+
+latest_item = Item.find_by(name: "Spartan T-Shirt")
+latest_item.collections << Collection.find_by(name: "Men")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1516082669438-2d2bb5082626?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1516178151140-1a27a08c417a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80")
            
 Item.create(name: "Baseball Cap",
            description: "A stylish hat for your head. In black, of course.",
            price: 19.99,
            popularity: 55,
            startsellingdate: 5.months.ago)
-           # https://unsplash.com/photos/flFI_7Rs6Ik
-Item.find_by(name: "Baseball Cap").collections << Collection.find_by(name: "Men")
-Item.find_by(name: "Baseball Cap").collections << Collection.find_by(name: "Women") 
+
+latest_item = Item.find_by(name: "Baseball Cap")
+latest_item.collections << Collection.find_by(name: "Men")
+latest_item.collections << Collection.find_by(name: "Women") 
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1574643210821-9630d4037a2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
            
 Item.create(name: "Beanie",
            description: "Keep your head warm with this comfortable beanie",
            price: 19.99,
            popularity: 70,
            startsellingdate: 5.weeks.ago)
-           # https://unsplash.com/photos/yZ9srtbBbKE
-           # https://unsplash.com/photos/A1WqCbYGdrA
-Item.find_by(name: "Beanie").collections << Collection.find_by(name: "Men")
-Item.find_by(name: "Beanie").collections << Collection.find_by(name: "Women") 
+
+latest_item = Item.find_by(name: "Beanie")
+latest_item.collections << Collection.find_by(name: "Men")
+latest_item.collections << Collection.find_by(name: "Women") 
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1520517601640-32ec514e4a15?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1520772902905-b72529a56c25?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=699&q=80")
 
 Item.create(name: "Kids Vest",
            description: "It's comfortable. It's fluffy. It's perfect.",
            price: 39.99,
            popularity: 44,
            startsellingdate: 1.year.ago)
-           # https://unsplash.com/photos/OWi1sIWiCAI
-Item.find_by(name: "Kids Vest").collections << Collection.find_by(name: "Kids")
+
+latest_item = Item.find_by(name: "Kids Vest")
+latest_item.collections << Collection.find_by(name: "Kids")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1507036066871-b7e8032b3dea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80")
 
 Item.create(name: "Kids Shirt",
            description: "It may have other colours in it, but we'll let it slide.",
            price: 29.99,
            popularity: 50,
            startsellingdate: 2.months.ago)
-           # https://unsplash.com/photos/fwJMG9zm3dI
-Item.find_by(name: "Kids Shirt").collections << Collection.find_by(name: "Kids")
+
+latest_item = Item.find_by(name: "Kids Shirt")
+latest_item.collections << Collection.find_by(name: "Kids")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1529776292731-c2246c65df5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
 
 Item.create(name: "Future Leader Kids T-Shirt",
            description: "Have high ambitions for your child? This t-shirt will be perfect.",
            price: 19.99,
            popularity: 46,
            startsellingdate: 1.month.ago)
-           # https://unsplash.com/photos/0pB01U2NDCQ
-Item.find_by(name: "Future Leader Kids T-Shirt").collections << Collection.find_by(name: "Kids")
+
+latest_item = Item.find_by(name: "Future Leader Kids T-Shirt")
+latest_item.collections << Collection.find_by(name: "Kids")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80")
 
 Item.create(name: "Washable Face Mask",
            description: "Stay safe and protect others with this face mask. In black, of course.",
            price: 9.99,
            popularity: 88,
            startsellingdate: 1.year.ago)         
-           # https://unsplash.com/photos/EJWaKVPB6iI
-           # https://unsplash.com/photos/cWUQBCLhpbw
-Item.find_by(name: "Washable Face Mask").collections << Collection.find_by(name: "Men")
-Item.find_by(name: "Washable Face Mask").collections << Collection.find_by(name: "Women")
+
+latest_item = Item.find_by(name: "Washable Face Mask")
+latest_item.collections << Collection.find_by(name: "Men")
+latest_item.collections << Collection.find_by(name: "Women")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1598207951491-255eaf139751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80")
+Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1598207950171-53387c37007a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
