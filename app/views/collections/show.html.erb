@@ -1,6 +1,14 @@
 <% provide(:title, @collection.name) %>
 
-<p>This is the <%= @collection.name %> collection.</p>
-<p><span class = "label label-warning">TODO</span></p>
+<p>Showing <b><%= @items.count %></b> items.</p>
+<hr>
 
-<p>This collection has <b><%= @items.count %></b> items.</p>
+<% @collection.items.each do |item| %>
+  <div class="row">
+    <div class="col-xs-12 black-links">
+      <p>Picture?</p>
+      <h4><%= link_to item.name, controller: 'items', action: 'show', id: item.id %></h4>
+      <p>$<%= item.price %></p>
+    </div>
+  </div>
+<% end %>

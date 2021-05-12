@@ -33,7 +33,7 @@
 
 <% Collection.all.each do |collection| %>
   <div class="row">
-    <div class="col-xs-12 collection-popout">
+    <div class="col-xs-12 collection-popout black-links">
       <h4><%= link_to collection.name, controller: 'collections', action: 'show', id: collection.id %></h4>
     <p><%= collection.items.count %> items</p>
   </div>
