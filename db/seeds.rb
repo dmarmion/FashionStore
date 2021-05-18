@@ -158,3 +158,12 @@ latest_item.collections << Collection.find_by(name: "Men")
 latest_item.collections << Collection.find_by(name: "Women")
 Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1598207951491-255eaf139751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80")
 Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/photo-1598207950171-53387c37007a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80")
+
+# Populate new arrivals collection with items that went on sale in the last
+# three months
+# i.e. the startsellingdate is *greater* than 3 months ago
+Item.all.each do | item |
+  if item.startsellingdate > 3.months.ago
+    item.collections << Collection.find_by(name: "New Arrivals")
+  end
+end
