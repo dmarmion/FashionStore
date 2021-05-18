@@ -50,7 +50,7 @@ Photo.create(item_id: latest_item.id, address: "https://images.unsplash.com/phot
 Item.create(name: "Short Sleeve T-Shirt",
            description: "A comfortable t-shirt featuring a hand skeleton print",
            price: 29.99,
-           popularity: 90,
+           popularity: 75,
            startsellingdate: 2.weeks.ago)
            
 latest_item = Item.find_by(name: "Short Sleeve T-Shirt")

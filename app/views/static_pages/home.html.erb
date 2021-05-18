@@ -11,16 +11,17 @@
 <!-- Popular section -->
 <div class="row">
   <div class="col-xs-12">
-    <h2>Popular</h2><span class="label label-warning">TODO</span>
+    <h2>Popular</h2>
   </div>
-  <div class="col-xs-6">
-    <h4>I am a placeholder.</h4>
-    <p>Looks like I still have some work to do...</p>
-  </div>
-  <div class="col-xs-6">
-    <h4>I am a placeholder.</h4>
-    <p>Looks like I still have some work to do...</p>
-  </div>
+</div>
+<div class="row">
+  <% most_popular_items(2).each do |item| %>
+    <div class="col-xs-6">
+      <%= image_tag item.photos.first.address, width: 150 %>
+      <h4><%= item.name %></h4>
+      <p>$<%= item.price %></p>  
+    </div>
+  <% end %>
 </div>
 
 <!-- Collections section -->
