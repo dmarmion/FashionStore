@@ -20,9 +20,9 @@
       <div class="col-xs-6">
         <% if item %>
           <%= image_tag item.photos.first.address, width: 150 %>
+          <h4><%= item.name %></h4>
+          <p>$<%= item.price %></p>  
         <% end %>
-        <h4><%= item.name %></h4>
-        <p>$<%= item.price %></p>  
       </div>
     <% end %>
   <% end %>
