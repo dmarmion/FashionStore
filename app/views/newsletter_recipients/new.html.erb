@@ -1,7 +1,7 @@
 <% provide(:title, "Newsletter Sign Up") %>
 
 <% if @success %>
-  <p>You were signed up to our newsletter. A confirmation email has been sent to <%= @email %>.</p>
+  <p>You were signed up to our newsletter. A confirmation email has been sent to <b><%= @email %></b>.</p>
 <% else %>
   <p>Sorry, we were unable to sign you up to our newsletter. Check your email address is correct and try again.</p>
 <% end %>
