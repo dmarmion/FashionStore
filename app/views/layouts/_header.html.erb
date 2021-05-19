@@ -3,7 +3,21 @@
         <nav>
             <p class="center"><b><%= yield(:title) %></b></p>
             <ul class="nav navbar-nav navbar-left">
-                <li><%= link_to "Menu", '#' %></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Menu <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><%= link_to "Home", root_path %></li>
+                        <li class="divider"></li>
+                        <% Collection.all.each do |collection| %>
+                            <li><%= link_to collection.name, controller: 'collections', action: 'show', id: collection.id %></li>
+                        <% end %>
+                        <li class="divider"></li>
+                        <li><%= link_to "Saved List", '#' %></li>
+                        <li><%= link_to "Help & Support", support_path %></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><%= link_to "Shopping Bag", '#' %></li>
