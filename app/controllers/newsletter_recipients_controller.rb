@@ -1,10 +1,12 @@
 class NewsletterRecipientsController < ApplicationController
   def new
     @email = params[:email_address]
+    @success = false
     
-    # email_regex = /^[a-z0-9]+@[a-z0-9]+\.[a-z]+$/i
+    subscriber = NewsletterRecipient.new(email: @email)
     
-    # if @email =~ email_regex
-    # end
+    if subscriber.save
+      @success = true
+    end
   end
 end

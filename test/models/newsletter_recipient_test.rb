@@ -14,8 +14,6 @@ class NewsletterRecipientTest < ActiveSupport::TestCase
     assert_not @nr.valid?
   end
   
-  # I attempted to add email validation, but couldn't get it working for
-  # some reason
   test "good emails should pass" do
     valid_emails = ["tim@apple.com", "CaPiTa@lIsAtI.oN", "under_score@da-sh.com",
                     "with+plus@gmail.com", "dotsare.fine@bazinga.biz"]
