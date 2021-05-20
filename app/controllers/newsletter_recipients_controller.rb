@@ -7,6 +7,8 @@ class NewsletterRecipientsController < ApplicationController
     
     if subscriber.save
       @success = true
+      
+      NewsletterRecipientMailer.signup_email(subscriber).deliver_later
     end
   end
 end
