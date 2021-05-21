@@ -1,12 +1,28 @@
 <% provide(:title, "Home") %>
 
-<div class="row" style="background-color: grey; color: white">
-  <div class="col-xs-12">
-    <h1>Welcome to Noir.</h1>
-    <p>A featured product will go here... when I get around to it...</p>
-    <p><span class="label label-warning">TODO</span></p>
+<!-- Top banner section -->
+<% if random_unsaved_item %>
+  <% featured_item = random_unsaved_item %>
+  <div class="row featured-item">
+    <div class="col-xs-12 black-links">
+      <%= image_tag featured_item.photos.first.address, width: 250 %>
+      <h1><%= link_to featured_item.name, controller: 'items', action: 'save', id: featured_item.id %></h1>
+      <p><%= featured_item.description %></p>
+      <p>$<%= featured_item.price %></p>
+    </div>
+    <div class="col-xs-12">
+      <%= link_to controller: 'items', action: 'save', id: featured_item.id do %>
+        <button class="btn btn-primary"><b>+</b></button>
+      <% end %>
+    </div>
   </div>
-</div>
+<% else %>
+  <div class="row" style="background-color: grey; color: white">
+    <div class="col-xs-12">
+      <h1>Welcome to Noir.</h1>
+    </div>
+  </div>
+<% end %>
 
 <!-- Popular section -->
 <div class="row">
