@@ -15,7 +15,7 @@
                             <li><%= link_to collection.name, controller: 'collections', action: 'show', id: collection.id %></li>
                         <% end %>
                         <li class="divider"></li>
-                        <li><%= link_to "Saved List", '#' %></li>
+                        <li><%= link_to "Saved List", saved_list_path %></li>
                         <li><%= link_to "Help & Support", support_path %></li>
                     </ul>
                 </li>
