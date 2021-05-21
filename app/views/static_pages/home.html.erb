@@ -17,11 +17,12 @@
 <div class="row">
   <% if most_popular_items(2) %>
     <% most_popular_items(2).each do |item| %>
-      <div class="col-xs-6">
+      <div class="col-xs-6 black-links">
         <% if item %>
           <%= image_tag item.photos.first.address, width: 150 %>
-          <h4><%= item.name %></h4>
-          <p>$<%= item.price %></p>  
+          <h4><%= link_to item.name, controller: 'items', action: 'save', id: item.id %></h4>
+          <p>$<%= item.price %></p>
+          <p><%= in_saved_list?(item) %></p>
         <% end %>
       </div>
     <% end %>
