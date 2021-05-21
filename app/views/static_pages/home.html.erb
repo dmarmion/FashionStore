@@ -22,7 +22,9 @@
           <%= image_tag item.photos.first.address, width: 150 %>
           <h4><%= link_to item.name, controller: 'items', action: 'save', id: item.id %></h4>
           <p>$<%= item.price %></p>
-          <p><%= in_saved_list?(item) %></p>
+          <% if in_saved_list?(item) %>
+            <h4><span class="label label-primary">Saved</span></h4>
+          <% end %>
         <% end %>
       </div>
     <% end %>

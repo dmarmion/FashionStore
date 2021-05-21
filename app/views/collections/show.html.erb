@@ -7,8 +7,11 @@
   <div class="row">
     <div class="col-xs-12 black-links">
       <%= image_tag item.photos.first.address, height: 200 %>
-      <h4><%= link_to item.name, controller: 'items', action: 'show', id: item.id %></h4>
+      <h4><%= link_to item.name, controller: 'items', action: 'save', id: item.id %></h4>
       <p>$<%= item.price %></p>
+      <% if in_saved_list?(item) %>
+        <h4><span class="label label-primary">Saved</span></h4>
+      <% end %>
     </div>
   </div>
 <% end %>
