@@ -63,4 +63,9 @@ Rails.application.configure do
     authentication:       'plain',
     enable_starttls_auto: true  
   }
+  
+  # Devise-related settings
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.perform_caching = false
+  config.action_mailer.default_url_options = {host: 'localhost', port: 3000}
 end
