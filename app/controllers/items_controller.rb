@@ -36,4 +36,13 @@ class ItemsController < ApplicationController
     # Send the user back to the previous page
     redirect_back(fallback_location: root_path)
   end
+  
+  def add_to_bag
+    @item = Item.find(params[:id])
+    
+    # Shopping bag functionality has not yet been implemented.
+    flash[:alert] = @item.name + " added to bag."
+    
+    redirect_to saved_list_path
+  end
 end

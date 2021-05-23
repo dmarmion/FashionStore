@@ -15,6 +15,17 @@
   </div>
 </div>
 
-<!--<#%= link_to controller: 'items', action: 'save', id: featured_item.id do %>-->
-  <button class="btn btn-primary"><b>Add to Bag</b></button>
-<!--<#% end %>-->
+<%= form_tag action: 'add_to_bag', controller: 'items' do %>
+  <div class="row">
+    <div class="col-xs-4">
+      <%= select_tag "Size", options_for_select(%w[S M L XL], "M"), class: "form-control", style: "margin-bottom: 15px;" %>
+    </div>
+    <div class="col-xs-4">
+      <%= select_tag "Colour", options_for_select(%w[Black Very\ Dark\ Grey Dark\ Grey], "Black"), class: "form-control", style: "margin-bottom: 15px;" %>
+    </div>
+    <div class="col-xs-4">
+      <%= select_tag "Quantity", options_for_select(%w[1 2 3 4 5 6 7 8], "1"), class: "form-control", style: "margin-bottom: 15px;" %>
+    </div>
+  </div>
+  <%= submit_tag 'Add to Bag', class: 'btn btn-primary', style: 'margin-bottom: 15px' %>
+<% end %>
