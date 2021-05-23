@@ -3,6 +3,18 @@
 <%= image_tag @first_photo.address, height: 200 %>
 
 <h1><%= @item.name %></h1>
-<h4><span class="label label-primary"><%= @item.popularity %></span></h4>
-<p><%= @item.description %></p>
 <p>$<%= @item.price %></p>
+<h4><span class="label label-default">Popularity: <%= @item.popularity %></span></h4>
+<p><%= @item.description %></p>
+<hr>
+
+<!-- Size/colour/quantity selectors-->
+<div class="row">
+  <div class="col-xs-4">
+    
+  </div>
+</div>
+
+<!--<#%= link_to controller: 'items', action: 'save', id: featured_item.id do %>-->
+  <button class="btn btn-primary"><b>Add to Bag</b></button>
+<!--<#% end %>-->
